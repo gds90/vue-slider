@@ -15,8 +15,9 @@
 
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
-
-                <div class="item" @mouseover="stopAutoplay" @mouseleave="startAutoplay"> // BONUS 3 quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
+                
+                <!-- BONUS 3 quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce -->
+                <div class="item" @mouseover="stopAutoplay" @mouseleave="startAutoplay">  
                     <img :src="`./${slides[activeSlide].image}`" alt="{{slides[activeSlide].title}}" />
                     <div class="text">
                         <h3>{{slides[activeSlide].title}}</h3>
