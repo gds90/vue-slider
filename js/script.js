@@ -60,6 +60,10 @@ createApp ({
             this.autoplayInterval = setInterval(() => {
               this.nextSlide();
             }, 3000);
+        },
+        // BONUS 3: creo funzione per fermare l'intervallo quando passo sopra la slide
+        stopAutoplay() {
+            clearInterval(this.autoplayInterval);
         }
     },
     // BONUS 2: faccio partire l'autoplay al momento del caricamento della pagina
