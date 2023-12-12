@@ -50,6 +50,9 @@ createApp ({
             else{
                 this.activeSlide--;
             }
+        },
+        changeSlide(index){
+            this.activeSlide = index;
         }
     }
 }).mount('#app');
