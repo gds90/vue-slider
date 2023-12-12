@@ -45,6 +45,7 @@
     width: 100%;
     opacity: 0.5;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .thumb.active {
