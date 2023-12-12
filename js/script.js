@@ -5,6 +5,7 @@ createApp ({
     data(){
         return {
             activeSlide: 0,
+            autoplayInterval: null,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -53,6 +54,16 @@ createApp ({
         },
         changeSlide(index){
             this.activeSlide = index;
+        },
+        // BONUS 2: autoplay del cambio slide ogni 3 secondi
+        startAutoplay() {
+            this.autoplayInterval = setInterval(() => {
+              this.nextSlide();
+            }, 3000);
         }
+    },
+    // BONUS 2: faccio partire l'autoplay al momento del caricamento della pagina
+    mounted() {
+        this.startAutoplay();
     }
 }).mount('#app');
